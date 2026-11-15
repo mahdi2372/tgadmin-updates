@@ -13,11 +13,11 @@ This repository hosts the signed APK releases and the auto-update feed.
 
 ## Promo video
 
-[![TG Admin 2.1.2 promo video](video/out/TGAdmin_thumbnail.jpg)](video/out/TGAdmin_YouTube_1080p.mp4)
+[![TG Admin 2.1.2 promo video](video/out/TGAdmin_thumbnail.jpg)](https://mahdi2372.github.io/tgadmin-updates/video/)
 
 A 60-second overview of TG Admin 2.1.2 with Bengali narration and English on-screen text. The phone UI shown is an illustrative mockup, not a real device capture.
 
-[Watch the MP4](video/out/TGAdmin_YouTube_1080p.mp4) · [English subtitles](video/out/tgadmin_en.srt) · [Bengali subtitles](video/out/tgadmin_bn.srt)
+[Play the video](https://mahdi2372.github.io/tgadmin-updates/video/) · [Download MP4](video/out/TGAdmin_YouTube_1080p.mp4) · [English subtitles](video/out/tgadmin_en.srt) · [Bengali subtitles](video/out/tgadmin_bn.srt)
 
 ## Latest release
 

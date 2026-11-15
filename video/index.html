@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>TG Admin 2.1.2 — Promo video</title>
+  <style>
+    :root {
+      --bg: #041012;
+      --panel: #081e20;
+      --line: #1b4a40;
+      --accent: #3ddc84;
+      --text: #f6fbfa;
+      --muted: #9dbfbd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 32px 20px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 78% 12%, rgba(61, 220, 132, 0.13), transparent 34rem),
+        radial-gradient(circle at 18% 88%, rgba(27, 177, 168, 0.09), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    main { width: min(1180px, 100%); }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .brand span {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(61, 220, 132, 0.45);
+      border-radius: 11px;
+      background: rgba(61, 220, 132, 0.1);
+      color: var(--accent);
+      font-size: 14px;
+    }
+    .github {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .github:hover { color: var(--accent); }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    h1 em { color: var(--accent); font-style: normal; }
+    .intro {
+      margin: 0 0 24px;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.55;
+    }
+    .player {
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #000;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+    }
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 18px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .meta a:hover { text-decoration: underline; }
+    .note {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(157, 191, 189, 0.16);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="top">
+      <a class="brand" href="https://github.com/mahdi2372/tgadmin-updates">
+        <span>TG</span>
+        TG Admin
+      </a>
+      <a class="github" href="https://github.com/mahdi2372/tgadmin-updates">View repository</a>
+    </div>
+
+    <h1>TG Admin <em>2.1.2</em></h1>
+    <p class="intro">Control your Android phone from Telegram. Remote screen mirroring, 320 commands, no root.</p>
+
+    <div class="player">
+      <video controls playsinline preload="metadata" poster="out/TGAdmin_thumbnail.jpg">
+        <source src="out/TGAdmin_YouTube_1080p.mp4" type="video/mp4">
+        <track kind="subtitles" src="out/tgadmin_en.vtt" srclang="en" label="English" default>
+        <track kind="subtitles" src="out/tgadmin_bn.vtt" srclang="bn" label="বাংলা">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+
+    <div class="meta">
+      <span>60 seconds · Bengali narration · 1080p</span>
+      <a href="out/TGAdmin_YouTube_1080p.mp4" download>Download MP4</a>
+      <a href="out/tgadmin_en.srt">English SRT</a>
+      <a href="out/tgadmin_bn.srt">Bengali SRT</a>
+    </div>
+
+    <p class="note">The phone UI in this video is an illustrative mockup, not a real device capture. Use TG Admin only on devices you own.</p>
+  </main>
+</body>
+</html>
