@@ -105,6 +105,12 @@ Signer #1 certificate SHA-256 digest: 308818e6b3ac52be332d3519cda69fd710837143c1
 
 Only install the APK if both the hash and signer match.
 
+## Release signing
+
+The private signing key and its password files are not distributed in this repository. Keep a secure offline backup: losing the key prevents future in-place updates.
+
+Version 2.1.1 is signed with APK Signature Scheme v3. The signing lineage links it to the previous debug-signed 2.1.0 build so that existing installs on Android 9+ can update in place.
+
 ## First-time setup
 
 1. Create a bot with [@BotFather](https://t.me/BotFather) and copy its token.
