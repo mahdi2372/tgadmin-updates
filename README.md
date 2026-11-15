@@ -15,25 +15,25 @@ This repository hosts the signed APK releases and the auto-update feed.
 
 | | |
 |---|---|
-| Version | **2.1.1** (versionCode 24) |
+| Version | **2.1.2** (versionCode 25) |
 | Released | 2026-11-15 |
 | Min Android | **Android 9+** for this signed build |
-| APK size | 205,640 bytes |
-| SHA-256 | `8CCD14838BD4B07423EBA52DC287946AEFF91E5EB8689C5B05508ABD107E9F15` |
+| APK size | 160,584 bytes |
+| SHA-256 | `4B590C5792EE525F80CE317F13842298200739297A315E4013E4E22E84956E6B` |
 | Signing cert SHA-256 | `308818e6b3ac52be332d3519cda69fd710837143c12a8e125baff3ea764e3382` |
 
 Download:
 
 - Stable name: [`TGAdmin.apk`](https://github.com/mahdi2372/tgadmin-updates/releases/latest/download/TGAdmin.apk)
-- Pinned version: [`TGAdmin-v2.1.1.apk`](https://github.com/mahdi2372/tgadmin-updates/releases/download/v2.1.1/TGAdmin-v2.1.1.apk)
+- Pinned version: [`TGAdmin-v2.1.2.apk`](https://github.com/mahdi2372/tgadmin-updates/releases/download/v2.1.2/TGAdmin-v2.1.2.apk)
 
 > The signed release uses APK Signature Scheme v3 only. Android 7/8 devices can remain on 2.1.0, or build and sign the app with v1/v2 signatures for older devices.
 
-## What's new in 2.1.1
+## What's new in 2.1.2
 
+- **Hardened R8 release** — full-mode obfuscation, unused-code removal, resource shrinking, shortened resource paths, and source-file renaming.
 - **Private release signing** — the active APK signer is a dedicated release key; v1/v2 debug signatures are removed.
 - **In-place update support** — the signing certificate lineage preserves updates from the debug-signed 2.1.0 build on Android 9+.
-- **Play Protect guidance** — a clear explanation of why sideloaded automation apps can still trigger warnings.
 - **Remote mirror reliability** — remote mode, automatic local/remote fallback, inline Home control, and `/stopmirror` are included from 2.1.0.
 - **Clean release build** — `lintRelease` reports `No issues found.`
 
@@ -51,7 +51,7 @@ Download:
 
 ## Requirements
 
-- Android 9 or newer for the signed 2.1.1 APK
+- Android 9 or newer for the signed 2.1.2 APK
 - A Telegram bot created with [@BotFather](https://t.me/BotFather)
 - Your numeric Telegram user ID
 - Notification access, accessibility access, and screen-capture consent for the features you use
@@ -61,7 +61,7 @@ Download:
 
 1. Download `TGAdmin.apk`.
 2. Verify the SHA-256 and signing certificate using the steps below.
-3. Install it. If 2.1.0 is already installed, install over it — do not uninstall first if you want to keep your token and settings.
+3. Install it. If 2.1.0 or 2.1.1 is already installed, install over it — do not uninstall first if you want to keep your token and settings.
 4. Open the app and complete the bot setup.
 
 For a manual install with ADB:
@@ -87,7 +87,7 @@ Get-FileHash .\TGAdmin.apk -Algorithm SHA256
 Expected:
 
 ```text
-8CCD14838BD4B07423EBA52DC287946AEFF91E5EB8689C5B05508ABD107E9F15
+4B590C5792EE525F80CE317F13842298200739297A315E4013E4E22E84956E6B
 ```
 
 Verify the signing certificate with Android SDK build-tools:
@@ -109,7 +109,13 @@ Only install the APK if both the hash and signer match.
 
 The private signing key and its password files are not distributed in this repository. Keep a secure offline backup: losing the key prevents future in-place updates.
 
-Version 2.1.1 is signed with APK Signature Scheme v3. The signing lineage links it to the previous debug-signed 2.1.0 build so that existing installs on Android 9+ can update in place.
+Version 2.1.2 is signed with APK Signature Scheme v3. The signing lineage links it to the previous debug-signed 2.1.0 build so that existing installs on Android 9+ can update in place.
+
+## Hardened build
+
+The 2.1.2 APK is processed with R8 full mode: class, method, field, and package names are shortened; unused code is removed; resource paths are shortened; and unused resources are stripped. Android component classes are kept by name so notification-listener, accessibility, device-admin, and launcher registrations survive updates.
+
+This is obfuscation, not encryption. An APK must be executable by Android, so a determined attacker can still reverse engineer it. No Android build can make decompilation impossible; hardening only raises the effort. The private R8 mapping file is not included in the APK or this repository.
 
 ## First-time setup
 
@@ -141,7 +147,7 @@ Remote mode sends a refreshed photo to the same Telegram message. Local mode sha
 
 TG Admin is **not distributed through Google Play**, and it is not possible to guarantee that Play Protect will never show a warning for a sideloaded app.
 
-Version 2.1.1 uses a private release key as the active signer and removes v1/v2 debug signatures. That removes one common reason Play Protect flags an APK. Play Protect may still warn or block apps that request sensitive capabilities such as SMS access, accessibility, notification access, device administration, screen capture, or app installation.
+Version 2.1.2 uses a private release key as the active signer and removes v1/v2 debug signatures. That removes one common reason Play Protect flags an APK. Play Protect may still warn or block apps that request sensitive capabilities such as SMS access, accessibility, notification access, device administration, screen capture, or app installation.
 
 A warning is not proof that an APK is malicious, and a clean scan is not proof that it is safe. Treat any sideloaded automation app as powerful software:
 
@@ -182,7 +188,7 @@ Do not disable Play Protect. Verify the APK hash and signer first. If they match
 
 **"App not installed" on Android 7 or 8**
 
-The 2.1.1 release APK uses APK Signature Scheme v3, which requires Android 9+. Remain on 2.1.0 or build and sign a v1/v2-compatible APK for older devices.
+The 2.1.2 release APK uses APK Signature Scheme v3, which requires Android 9+. Remain on 2.1.0 or build and sign a v1/v2-compatible APK for older devices.
 
 **Bot does not respond**
 
@@ -205,3 +211,4 @@ Open the latest release page and download `TGAdmin.apk` manually. Verify the has
 ## Disclaimer
 
 TG Admin is intended for personal use on devices you own. You are responsible for how you use it and for complying with applicable laws. The software is provided as-is, without warranty.
+
