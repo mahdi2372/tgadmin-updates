@@ -31,7 +31,7 @@ Download:
 
 ## What's new in 2.1.1
 
-- **Private release signing** — the APK is signed with a dedicated release key instead of the Android debug key.
+- **Private release signing** — the active APK signer is a dedicated release key; v1/v2 debug signatures are removed.
 - **In-place update support** — the signing certificate lineage preserves updates from the debug-signed 2.1.0 build on Android 9+.
 - **Play Protect guidance** — a clear explanation of why sideloaded automation apps can still trigger warnings.
 - **Remote mirror reliability** — remote mode, automatic local/remote fallback, inline Home control, and `/stopmirror` are included from 2.1.0.
@@ -141,7 +141,7 @@ Remote mode sends a refreshed photo to the same Telegram message. Local mode sha
 
 TG Admin is **not distributed through Google Play**, and it is not possible to guarantee that Play Protect will never show a warning for a sideloaded app.
 
-Version 2.1.1 replaces the debug signing certificate with a private release key. That removes one common reason Play Protect flags an APK. Play Protect may still warn or block apps that request sensitive capabilities such as SMS access, accessibility, notification access, device administration, screen capture, or app installation.
+Version 2.1.1 uses a private release key as the active signer and removes v1/v2 debug signatures. That removes one common reason Play Protect flags an APK. Play Protect may still warn or block apps that request sensitive capabilities such as SMS access, accessibility, notification access, device administration, screen capture, or app installation.
 
 A warning is not proof that an APK is malicious, and a clean scan is not proof that it is safe. Treat any sideloaded automation app as powerful software:
 
