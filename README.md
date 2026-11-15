@@ -2,7 +2,7 @@
 
 **Telegram-controlled Android device administration with remote screen mirroring.**
 
-[Download latest](https://github.com/mahdi2372/tgadmin-updates/releases/latest) · [Verify the APK](#verify-the-download) · [Play Protect guidance](#play-protect-and-sideloading)
+[Download latest](https://github.com/mahdi2372/tgadmin-updates/releases/latest) · [Promo video](#promo-video) · [Verify the APK](#verify-the-download) · [Play Protect guidance](#play-protect-and-sideloading)
 
 ![release](https://img.shields.io/github/v/release/mahdi2372/tgadmin-updates?label=release)
 ![platform](https://img.shields.io/badge/Android-9%2B-3ddc84)
@@ -10,6 +10,14 @@
 TG Admin is a private, self-hosted control panel for a single Android device. Commands are sent through a Telegram bot that you create and control. The app connects directly to the Telegram Bot API; there is no third-party relay server.
 
 This repository hosts the signed APK releases and the auto-update feed.
+
+## Promo video
+
+[![TG Admin 2.1.2 promo video](video/out/TGAdmin_thumbnail.jpg)](video/out/TGAdmin_YouTube_1080p.mp4)
+
+A 60-second overview of TG Admin 2.1.2 with Bengali narration and English on-screen text. The phone UI shown is an illustrative mockup, not a real device capture.
+
+[Watch the MP4](video/out/TGAdmin_YouTube_1080p.mp4) · [English subtitles](video/out/tgadmin_en.srt) · [Bengali subtitles](video/out/tgadmin_bn.srt)
 
 ## Latest release
 
